@@ -7,5 +7,6 @@ provider "aws" {
 }
 
 resource "aws_instance" "example" {
+  ami =  ami = data.aws_ami.server_ami.id
   instance_type = "t2.micro"
 }
